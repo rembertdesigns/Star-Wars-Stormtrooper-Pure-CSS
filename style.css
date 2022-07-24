@@ -1,0 +1,514 @@
+html,
+body{
+  width: 100%;
+  height: 100%;
+  background: rgb(155, 14, 14);
+  margin: 0;
+}
+*,
+:before,
+:after{
+  position: absolute;
+  content: '';
+  box-sizing: border-box;
+}
+.grid{
+  width: 30em;
+  height: 30em;
+  font-size: 2.4vmin;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  background: repeating-linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 0.9em, rgba(0, 255, 255, 0.2) 1em), repeating-linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0) 0.9em, rgba(0, 255, 255, 0.2) 1em);
+  pointer-events: none;
+  z-index: 999;
+}
+.stormtrooper{
+  font-size: 2.4vmin;
+  width: 30em;
+  height: 30em;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.stormtrooper .dome{
+  width: 17em;
+  height: 10em;
+  background: white;
+  left: 6.5em;
+  border-top-left-radius: 45% 70%;
+  border-top-right-radius: 45% 70%;
+  transform: perspective(36em) rotateX(40deg);
+  transform-origin: 50% 0;
+  overflow: hidden;
+}
+.stormtrooper .dome:before,
+.stormtrooper .dome:after{
+  background: #bababa;
+  width: 1.2em;
+  height: 2.7em;
+  bottom: 0;
+  transform-origin: 0 0;
+  transform: rotate(-5deg) skewY(30deg);
+}
+.stormtrooper .dome:before{
+  left: -0.6em;
+  bottom: 0;
+}
+.stormtrooper .dome:after{
+  right: -0.6em;
+  transform-origin: 100% 0;
+  transform: rotate(5deg) skewY(-30deg);
+}
+.stormtrooper .mask{
+  width: 22em;
+  height: 14em;
+  background: white;
+  left: 4em;
+  top: 10em;
+  border-radius: 1em;
+}
+.stormtrooper .mask:after{
+  height: 0.5em;
+  width: 20em;
+  left: 1em;
+  top: 1em;
+  background: white;
+  border-bottom-left-radius: 50% 0.5em;
+  border-bottom-right-radius: 50% 0.5em;
+}
+.stormtrooper .mask .ear{
+  width: 1em;
+  height: 6.4em;
+  background: #e0e0e0;
+  top: 0.5em;
+}
+.stormtrooper .mask .ear.left{
+  left: -0.25em;
+  border-top-left-radius: 0.5em 1.5em;
+}
+.stormtrooper .mask .ear.left:after{
+  bottom: -2.8em;
+  left: -3.7em;
+  transform-origin: 0 100%;
+  transform: rotate(45deg);
+  border-bottom-left-radius: 3em 4em;
+}
+.stormtrooper .mask .ear.left:before{
+  left: -0.5em;
+  border-radius: 0.25em 0 0 0.25em;
+}
+.stormtrooper .mask .ear.right{
+  right: -0.25em;
+  border-top-right-radius: 0.5em 1.5em;
+}
+.stormtrooper .mask .ear.right:after{
+  bottom: -2.8em;
+  right: -3.7em;
+  transform-origin: 100% 100%;
+  transform: rotate(-45deg);
+  border-bottom-right-radius: 3em 4em;
+}
+.stormtrooper .mask .ear.right:before{
+  right: -0.5em;
+  border-radius: 0 0.25em 0.25em 0;
+}
+.stormtrooper .mask .ear:after{
+  width: 4em;
+  height: 5.3em;
+  background: inherit;
+}
+.stormtrooper .mask .ear:before{
+  width: 0.5em;
+  height: 2.25em;
+  background: #545454;
+  top: 1.75em;
+}
+.stormtrooper .mask .cheek-tube{
+  height: 4.5em;
+  width: 7em;
+  background: white;
+  top: 7.25em;
+}
+.stormtrooper .mask .cheek-tube:before{
+  width: 4.5em;
+  height: 1.5em;
+  background: inherit;
+  background: repeating-linear-gradient(to right, white, white 0.15em, hsl(240, 40%, 35%) 0.18em, hsl(240, 40%, 35%) 0.47em, white 0.5em);
+  top: 0.9em;
+  border-bottom-left-radius: 50% 0.5em;
+  border-bottom-right-radius: 50% 0.5em;
+}
+.stormtrooper .mask .cheek-tube:after{
+  width: 5.5em;
+  height: 4em;
+  background: white;
+  bottom: 3.45em;
+  border-bottom-left-radius: 50% 0.5em;
+  border-bottom-right-radius: 50% 0.5em;
+}
+.stormtrooper .mask .cheek-tube.left{
+  left: 0.25em;
+  transform-origin: 0 0;
+  transform: rotate(52deg);
+  border-bottom-left-radius: 3em 4em;
+  border-bottom-right-radius: 3em 4em;
+}
+.stormtrooper .mask .cheek-tube.left:before{
+  left: 0.5em;
+}
+.stormtrooper .mask .cheek-tube.left:after{
+  left: 0;
+}
+.stormtrooper .mask .cheek-tube.right{
+  right: 0.25em;
+  transform-origin: 100% 0;
+  transform: rotate(-52deg);
+  border-bottom-right-radius: 3em 4em;
+  border-bottom-left-radius: 3em 4em;
+}
+.stormtrooper .mask .cheek-tube.right:before{
+  right: 0.5em;
+}
+.stormtrooper .mask .cheek-tube.right:after{
+  right: 0;
+}
+.stormtrooper .mask .frown{
+  width: 14em;
+  height: 5em;
+  background: white;
+  left: 4em;
+  top: 7em;
+  overflow: hidden;
+}
+.stormtrooper .mask .frown:before,
+.stormtrooper .mask .frown:after{
+  width: 8em;
+  height: 2em;
+  background: white;
+  border-radius: 50%;
+  top: 0.5em;
+  z-index: 1;
+}
+.stormtrooper .mask .frown:before{
+  left: -0.5em;
+  transform: rotate(-35deg);
+}
+.stormtrooper .mask .frown:after{
+  right: -0.5em;
+  transform: rotate(35deg);
+}
+.stormtrooper .mask .frown .teeth{
+  width: 9em;
+  height: 9em;
+  left: 7em;
+  top: 0.2em;
+  background: black;
+  transform-origin: 0 0;
+  transform: scaleY(0.62) rotate(45deg);
+  border-top-left-radius: 1.5em;
+  border-bottom-left-radius: 0.5em;
+  border-top-right-radius: 0.5em;
+  overflow: hidden;
+}
+.stormtrooper .mask .frown .teeth:after{
+  width: 1em;
+  height: 8em;
+  background: #545454;
+  transform: rotate(-45deg);
+  left: 2.5em;
+  top: -1em;
+  box-shadow: 1.6em 0 0 -0.05em #545454, 3em 0 0 -0.1em #545454, 4.3em 0 0 -0.15em #545454, 5.7em 0 0 #545454, -1.6em 0 0 -0.05em #545454, -3em 0 0 -0.1em #545454, -4.3em 0 0 -0.15em #545454, -5.7em 0 0 #545454;
+}
+.stormtrooper .mask .vents{
+  width: 20em;
+  height: 5.5em;
+  top: 3em;
+  left: 1em;
+}
+.stormtrooper .mask .vents .left,
+.stormtrooper .mask .vents .right{
+  width: 3.8em;
+  height: 2.6em;
+  background: #bababa;
+  top: 3.25em;
+}
+.stormtrooper .mask .vents .left{
+  right: 17.8em;
+  transform-origin: 100% 0;
+  transform: scaleX(0.5) rotate(45deg);
+  border-bottom-left-radius: 70% 100%;
+}
+.stormtrooper .mask .vents .right{
+  left: 17.8em;
+  transform-origin: 0 0;
+  transform: scaleX(0.5) rotate(-45deg);
+  border-bottom-right-radius: 70% 100%;
+}
+.stormtrooper .mask .chin{
+  width: 22em;
+  height: 11em;
+  top: 9em;
+}
+.stormtrooper .mask .chin:before,
+.stormtrooper .mask .chin:after{
+  width: 2.9em;
+  height: 5em;
+  border-radius: 0 0 50% 50%;
+  background: white;
+  bottom: 5.4em;
+  z-index: 1;
+}
+.stormtrooper .mask .chin:before{
+  right: 12.52em;
+  transform-origin: 100% 100%;
+  transform: rotate(-55deg);
+  border-bottom-left-radius: 50% 100%;
+}
+.stormtrooper .mask .chin:after{
+  left: 12.52em;
+  transform-origin: 0 100%;
+  transform: rotate(55deg);
+  border-bottom-right-radius: 50% 100%;
+}
+.stormtrooper .mask .chin .left,
+.stormtrooper .mask .chin .right{
+  width: 14.25em;
+  height: 8.3em;
+  top: -1em;
+  background: white;
+}
+.stormtrooper .mask .chin .left:before,
+.stormtrooper .mask .chin .right:before{
+  width: 10em;
+  height: 5em;
+  background: inherit;
+  bottom: -0.3em;
+}
+.stormtrooper .mask .chin .left .aerator,
+.stormtrooper .mask .chin .right .aerator{
+  background: #e0e0e0;
+  width: 5.2em;
+  height: 3.5em;
+  bottom: 0.5em;
+  border-radius: 50%;
+}
+.stormtrooper .mask .chin .left .aerator .tip,
+.stormtrooper .mask .chin .right .aerator .tip{
+  width: 2em;
+  height: 2em;
+  border-radius: 50%;
+  background: black;
+  top: 0.7em;
+}
+.stormtrooper .mask .chin .left .aerator .tip:after,
+.stormtrooper .mask .chin .right .aerator .tip:after{
+  width: 1.8em;
+  height: 1.8em;
+  top: 0.5em;
+  left: 0.1em;
+  border-radius: 50%;
+}
+.stormtrooper .mask .chin .left{
+  right: 9.5em;
+  transform-origin: 100% 0;
+  transform: rotate(-24deg);
+  border-top-right-radius: 3em;
+  border-top-left-radius: 1.8em 3.5em;
+  border-bottom-left-radius: 6em 5em;
+  border-bottom-right-radius: 50%;
+}
+.stormtrooper .mask .chin .left:before{
+  border-bottom-left-radius: 5em 5em;
+  border-bottom-right-radius: 5em 5em;
+  left: 0.1em;
+}
+.stormtrooper .mask .chin .left .aerator{
+  transform: rotate(24deg);
+  left: 2em;
+  border-top-right-radius: 0;
+}
+.stormtrooper .mask .chin .left .aerator .tip{
+  left: 1.75em;
+}
+.stormtrooper .mask .chin .right{
+  left: 9.5em;
+  transform-origin: 0 0;
+  transform: rotate(24deg);
+  border-top-left-radius: 3em;
+  border-top-right-radius: 1.8em 3.5em;
+  border-bottom-right-radius: 6em 5em;
+  border-bottom-left-radius: 50%;
+}
+.stormtrooper .mask .chin .right:before{
+  border-bottom-right-radius: 5em 5em;
+  border-bottom-left-radius: 5em 5em;
+  right: 0.1em;
+}
+.stormtrooper .mask .chin .right:after{
+  width: 4.7em;
+  height: 5em;
+  background: #e0e0e0;
+  transform: rotate(-24deg);
+  right: 7.35em;
+  top: 4em;
+  border-top-left-radius: 3em 4em;
+  border-top-right-radius: 3em 4em;
+  border-bottom-left-radius: 1em;
+  border-bottom-right-radius: 1em;
+}
+.stormtrooper .mask .chin .right .aerator{
+  transform: rotate(-24deg);
+  right: 2em;
+  border-top-left-radius: 0;
+}
+.stormtrooper .mask .chin .right .aerator .tip{
+  right: 1.75em;
+}
+.stormtrooper .mask .chin .vocoder{
+  width: 4.5em;
+  height: 3em;
+  background: black;
+  bottom: 1.7em;
+  left: 8.75em;
+  border-radius: 0.7em 0.7em 0.4em 0.4em;
+}
+.stormtrooper .mask .chin .vocoder:after{
+  width: 3.5em;
+  height: 4.5em;
+  background: black;
+  bottom: -0.5em;
+  left: 0.5em;
+  border-radius: 0.7em 0.7em 0.4em 0.4em;
+}
+.stormtrooper .mask .chin .vocoder:before{
+  width: 1em;
+  height: 5.5em;
+  background: black;
+  left: 1.75em;
+  z-index: 1;
+  bottom: -0.75em;
+  border-radius: 0.5em;
+  box-shadow: -0.82em 0 0 -0.1em black, 0.82em 0 0 -0.1em black;
+}
+.stormtrooper .mask .eyes{
+  width: 20em;
+  height: 6em;
+  left: 1em;
+  top: 1.3em;
+  overflow: hidden;
+  transform-origin: 50% 0;
+  transform: scaleY(1.1);
+}
+.stormtrooper .mask .eyes .left,
+.stormtrooper .mask .eyes .right{
+  width: 6em;
+  height: 3.8em;
+  top: 0.5em;
+  background: black;
+  z-index: 1;
+}
+.stormtrooper .mask .eyes .left:before,
+.stormtrooper .mask .eyes .right:before{
+  width: 1.2em;
+  height: 1.2em;
+  background: black;
+  border-radius: 50%;
+  top: 0.05em;
+}
+.stormtrooper .mask .eyes .left:after,
+.stormtrooper .mask .eyes .right:after{
+  width: 0.8em;
+  height: 0.8em;
+  background: black;
+  border-radius: 50%;
+  bottom: 0.2em;
+}
+.stormtrooper .mask .eyes .left{
+  left: 1.5em;
+  transform-origin: 0 0;
+  transform: rotate(-30deg);
+  border-top-left-radius: 0.9em 2em;
+  border-top-right-radius: 4.5em 2.8em;
+  border-bottom-right-radius: 1.5em 1em;
+  border-bottom-left-radius: 3em 1.8em;
+  background: linear-gradient(150deg, black 50%, #545454 50.3%, #545454 60%, black 60.3%);
+}
+.stormtrooper .mask .eyes .left:before{
+  left: 0.25em;
+  box-shadow: -0.2em -0.7em 0 white;
+}
+.stormtrooper .mask .eyes .left:after{
+  right: 0.3em;
+  box-shadow: 0.5em 0 0 white;
+}
+.stormtrooper .mask .eyes .right{
+  right: 1.5em;
+  transform-origin: 100% 0;
+  transform: rotate(30deg);
+  border-top-right-radius: 0.9em 2em;
+  border-top-left-radius: 4.5em 2.8em;
+  border-bottom-left-radius: 1.5em 1em;
+  border-bottom-right-radius: 3em 1.8em;
+  background: linear-gradient(90deg, black 45%, #545454 45.3%, #545454 54%, black 54.3%, black 60%, #545454 60.3%, #545454 64%, black 64.3%);
+}
+.stormtrooper .mask .eyes .right:before{
+  right: 0.25em;
+  box-shadow: 0.2em -0.7em 0 white;
+}
+.stormtrooper .mask .eyes .right:after{
+  left: 0.3em;
+  box-shadow: -0.5em 0 0 white;
+}
+.stormtrooper .mask .eyes:before,
+.stormtrooper .mask .eyes:after{
+  width: 7em;
+  height: 5em;
+  bottom: 0em;
+  background: white;
+}
+.stormtrooper .mask .eyes:before{
+  left: 1.9em;
+  transform-origin: 0 100%;
+  transform: rotate(-20deg);
+  border-top-left-radius: 1.5em 3em;
+  border-bottom-right-radius: 50% 2em;
+  border-bottom-left-radius: 50% 2em;
+  box-shadow: inset 0.4em -0.7em 0 -0.2em white;
+}
+.stormtrooper .mask .eyes:after{
+  right: 1.9em;
+  transform-origin: 100% 100%;
+  transform: rotate(20deg);
+  border-top-right-radius: 1.5em 3em;
+  border-bottom-left-radius: 50% 2em;
+  border-bottom-right-radius: 50% 2em;
+  box-shadow: inset -0.4em -0.7em 0 -0.2em white;
+}
+.stormtrooper .brow-trim{
+  width: 22em;
+  height: 1.5em;
+  background: black;
+  left: 4em;
+  top: 9em;
+  border-radius: 0.5em 0.5em 0 0;
+}
+.stormtrooper .brow-trim:before,
+.stormtrooper .brow-trim:after{
+  height: 0.5em;
+  border-bottom-left-radius: 50% 0.5em;
+  border-bottom-right-radius: 50% 0.5em;
+}
+.stormtrooper .brow-trim:after{
+  width: 22em;
+  background: black;
+  bottom: -0.5em;
+  left: 0em;
+}
+.stormtrooper .brow-trim:before{
+  width: 20.5em;
+  background: white;
+  background: linear-gradient(to right, #bababa 0, #bababa 4.685%, white 4.685%, white 95.5%, #bababa 95.5%, #bababa);
+  left: 0.75em;
+}
